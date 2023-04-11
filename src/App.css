@@ -68,6 +68,9 @@
 .square {
   width: 20vmin;
   height: 20vmin;
+  font-size: 80px;
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .board-row {
@@ -94,6 +97,7 @@
 .wiiner_box_wrapper p {
   letter-spacing: 2px;
   margin: 0 0 20px 0;
+  text-shadow: 0 0 10px white;
 }
 
 .wiiner_box_wrapper span {
@@ -103,15 +107,16 @@
 
 .wiiner_box_wrapper button {
   padding: 5px;
-  background-color: initial;
+  background-color: rgba(255, 255, 255, 0.429);
   border: 1px solid white;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 50px;
+  font-weight: 500;
 }
 
 .wiiner_box_wrapper button:hover {
-  background-color: rgba(255, 255, 255, 0.29);
+  background-color: rgba(255, 255, 255, 0.716);
 }
 
 .wiiner_box_wrapper button:active {
@@ -122,5 +127,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
+}
+
+.game h2 {
+  color: white;
+  text-shadow: 0 0 10px black;
+  margin-bottom: 50px;
+  font-weight: 100;
+  font-size: 50px;
 }
