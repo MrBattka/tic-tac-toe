@@ -9,7 +9,10 @@ const WinnerDesk = ({ winner, setEditMode, setCurrentMove }) => {
     
     return (
         <div className='wiiner_box_wrapper'>
-            <p>Winner Player: <span>{winner}</span></p>
+            <p>Winner Player: 
+                <span>{winner}</span>
+                <span>{!winner && 'the draw won'}</span>
+            </p>
             <button onClick={handleOnClick}>Play Again</button>
         </div>
     )

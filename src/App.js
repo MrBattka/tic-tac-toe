@@ -29,6 +29,7 @@ const Game = () => {
   return (
     <>
       {editMode && <WinnerDesk setCurrentMove={setCurrentMove} setEditMode={setEditMode} winner={winner} />}
+      {currentMove === 9 && !winner && <WinnerDesk setCurrentMove={setCurrentMove} setEditMode={setEditMode} winner={winner} />}
       <div className="game">
         <h2>Tic Tac Toe</h2>
         <div className="game-board">

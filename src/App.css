@@ -9,66 +9,10 @@
   justify-content: center;
 }
 
-.flexbox_cell {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.cell {
-  height: 20vmin;
-  width: 20vmin;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 10vmin;
-  font-weight: 400;
-  
-}
-
-.cell_symbol {
-  cursor: default;
-}
-
-.cell:first-child {
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
-.cell:nth-child(2) {
-  border-bottom: 1px solid black;
-}
-
-.cell:nth-child(3) {
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
-.cell:nth-child(4) {
-  border-right: 1px solid black;
-}
-
-.cell:nth-child(6) {
-  border-left: 1px solid black;
-}
-
-.cell:nth-child(7) {
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-}
-
-.cell:nth-child(8) {
-  border-top: 1px solid black;
-}
-
-.cell:nth-child(9) {
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-}
-
 .square {
   width: 20vmin;
   height: 20vmin;
-  font-size: 80px;
+  font-size: 16vmin;
   text-shadow: 0 0 10px rgb(255, 255, 255);
   cursor: pointer;
 }
@@ -90,17 +34,20 @@
   padding: 0;
   backdrop-filter: blur(3px);
   background-color: rgba(0, 0, 0, 0.381);
-  font-size: 28px;
+  font-size: 10vmin;
   font-weight: 500;
 }
 
 .wiiner_box_wrapper p {
+  text-align: center;
   letter-spacing: 2px;
   margin: 0 0 20px 0;
   text-shadow: 0 0 10px white;
 }
 
 .wiiner_box_wrapper span {
+  display: inline-block;
+  margin-left: 5px;
   color: white;
   text-shadow: 0 0 10px black;
 }
@@ -136,5 +83,32 @@
   text-shadow: 0 0 10px black;
   margin-bottom: 50px;
   font-weight: 100;
-  font-size: 50px;
+  font-size: 13vmin;
+}
+
+.status {
+  font-size: 3vmin;
+}
+
+@media(max-width: 450px) {
+  .game h2 {
+    font-size: 18vmin;
+  }
+
+  .wrapper_board {
+    width: 80vmin;
+  }
+
+  .square {
+    width: 30vmin;
+    height: 30vmin;
+  }
+
+  .board-row {
+    height: 30vmin;
+  }
+
+  .status {
+    font-size: 6vmin;
+  }
 }
