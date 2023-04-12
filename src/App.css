@@ -4,17 +4,22 @@
   margin: 0;
 }
 
-.wrapper_board {
-  width: 60vmin;
-  justify-content: center;
-}
-
 .square {
   width: 20vmin;
   height: 20vmin;
   font-size: 16vmin;
   text-shadow: 0 0 10px rgb(255, 255, 255);
   cursor: pointer;
+  border: 2px solid white;
+  background-color: rgba(173, 173, 173, 0.532);
+}
+
+.square:hover {
+  background-color: rgba(173, 173, 173, 0.334);
+}
+
+.square:active {
+  background-color: rgba(173, 173, 173, 0.532);
 }
 
 .board-row {
@@ -111,5 +116,9 @@
 
   .status {
     font-size: 6vmin;
+  }
+
+  .wiiner_box_wrapper button {
+    padding: 10px;
   }
 }

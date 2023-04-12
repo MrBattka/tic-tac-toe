@@ -11,7 +11,7 @@ const WinnerDesk = ({ winner, setEditMode, setCurrentMove }) => {
         <div className='wiiner_box_wrapper'>
             <p>Winner Player: 
                 <span>{winner}</span>
-                <span>{!winner && 'the draw won'}</span>
+                <span>{!winner && 'The Draw'}</span>
             </p>
             <button onClick={handleOnClick}>Play Again</button>
         </div>
