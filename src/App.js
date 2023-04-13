@@ -3,12 +3,14 @@ import './App.css';
 import Board from './components/Board';
 import WinnerDesk from './components/WinnerDesk';
 import { calculateWinner } from './models/winner';
+import MenuGame from './components/MenuGame';
 
 
 const Game = () => {
   const [history, setHistory] = useState([Array(9).fill(null)])
   const [currentMove, setCurrentMove] = useState(0)
-  const [editMode, setEditMode] = useState(false)
+  const [winnerEditMode, setWinnerEditMode] = useState(false)
+  const [isOpenMenu, setIsOpenMenu] = useState(true)
 
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove]
@@ -16,7 +18,7 @@ const Game = () => {
 
   useEffect(() => {
     if (winner) {
-      setEditMode(true)
+      setWinnerEditMode(true)
     }
   }, [winner])
 
@@ -25,11 +27,14 @@ const Game = () => {
     setHistory(nextHistory)
     setCurrentMove(nextHistory.length - 1)
   }
-  
+
   return (
     <>
-      {editMode && <WinnerDesk setCurrentMove={setCurrentMove} setEditMode={setEditMode} winner={winner} />}
-      {currentMove === 9 && !winner && <WinnerDesk setCurrentMove={setCurrentMove} setEditMode={setEditMode} winner={winner} />}
+      {winnerEditMode && <WinnerDesk setIsOpenMenu={setIsOpenMenu} setCurrentMove={setCurrentMove}
+        setWinnerEditMode={setWinnerEditMode} winner={winner} />}
+      {currentMove === 9 && !winner && <WinnerDesk setIsOpenMenu={setIsOpenMenu} setCurrentMove={setCurrentMove}
+        setWinnerEditMode={setWinnerEditMode} winner={winner} />}
+      {isOpenMenu && <MenuGame setIsOpenMenu={setIsOpenMenu} />}
       <div className="game">
         <h2>Tic Tac Toe</h2>
         <div className="game-board">

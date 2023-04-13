@@ -4,7 +4,7 @@ import Square from './Square';
 import { calculateWinner } from '../models/winner';
 
 const Board = ({ squares, xIsNext, onPlay }) => {
-    function handleClick(i) {
+    const handleClick = (i) => {
         if (calculateWinner(squares) || squares[i]) {
           return
         }

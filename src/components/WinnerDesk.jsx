@@ -1,19 +1,26 @@
 import React, { useCallback } from "react"
 
-const WinnerDesk = ({ winner, setEditMode, setCurrentMove }) => {
+const WinnerDesk = ({ winner, setWinnerEditMode, setCurrentMove, setIsOpenMenu }) => {
 
-    const handleOnClick = useCallback(() => {
-        setEditMode(false)
+    const handleOnClickOnPlay = useCallback(() => {
+        setWinnerEditMode(false)
         setCurrentMove(0)
-    }, [setEditMode, setCurrentMove])
+    }, [setWinnerEditMode, setCurrentMove])
     
+    const handleOnClickOnMenu = useCallback(() => {
+        setWinnerEditMode(false)
+        setIsOpenMenu(true)
+        setCurrentMove(0)
+    }, [setWinnerEditMode, setIsOpenMenu, setCurrentMove])
+
     return (
-        <div className='wiiner_box_wrapper'>
+        <div className='winner_box_wrapper'>
             <p>Winner Player: 
                 <span>{winner}</span>
                 <span>{!winner && 'The Draw'}</span>
             </p>
-            <button onClick={handleOnClick}>Play Again</button>
+            <button onClick={handleOnClickOnPlay}>Play Again</button>
+            <button onClick={handleOnClickOnMenu}>Back to Menu</button>
         </div>
     )
 }

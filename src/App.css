@@ -27,7 +27,7 @@
   display: flex;
 }
 
-.wiiner_box_wrapper {
+.winner_box_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,23 +41,25 @@
   background-color: rgba(0, 0, 0, 0.381);
   font-size: 10vmin;
   font-weight: 500;
+  animation-duration: 0.6s;
+  animation-name: slidein;
 }
 
-.wiiner_box_wrapper p {
+.winner_box_wrapper p {
   text-align: center;
   letter-spacing: 2px;
   margin: 0 0 20px 0;
   text-shadow: 0 0 10px white;
 }
 
-.wiiner_box_wrapper span {
+.winner_box_wrapper span {
   display: inline-block;
   margin-left: 5px;
   color: white;
   text-shadow: 0 0 10px black;
 }
 
-.wiiner_box_wrapper button {
+.winner_box_wrapper button {
   padding: 5px;
   background-color: rgba(255, 255, 255, 0.429);
   border: 1px solid white;
@@ -67,11 +69,11 @@
   font-weight: 500;
 }
 
-.wiiner_box_wrapper button:hover {
+.winner_box_wrapper button:hover {
   background-color: rgba(255, 255, 255, 0.716);
 }
 
-.wiiner_box_wrapper button:active {
+.winner_box_wrapper button:active {
   background-color: initial;
 }
 
@@ -96,6 +98,74 @@
   font-size: 3vmin;
 }
 
+.wrapper_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.381);
+  font-size: 10vmin;
+  font-weight: 500;
+  animation-duration: 0.6s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper_menu h2 {
+  text-shadow: 0 0 10px white;
+  color: black;
+  font-size: 12vmin;
+  margin-bottom: 8vmin;
+  letter-spacing: 3px;
+}
+
+.wrapper_btn_control{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper_menu button {
+  font-size: 3vmin;
+  background-color: initial;
+  border: none;
+  padding:  1vmin;
+  margin-top: 3vmin;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.wrapper_btn {
+  margin: 0;
+  height: 8.5vmin;
+  margin-top: 3vmin;
+}
+
+.wrapper_btn button:hover {
+  border: 1px solid white;
+  text-shadow: 0 0 10px white;
+}
+
+.wrapper_btn button:active {
+  border: none;
+  text-shadow: none;
+}
+
 @media(max-width: 450px) {
   .game h2 {
     font-size: 18vmin;
@@ -118,7 +188,20 @@
     font-size: 6vmin;
   }
 
-  .wiiner_box_wrapper button {
+  .winner_box_wrapper button {
     padding: 10px;
+  }
+
+  .wrapper_menu h2 {
+    font-size: 15vmin;
+  }
+
+  .wrapper_menu button {
+    font-size: 6vmin;
+    margin-top: 10vmin;
+  }
+
+  .wrapper_btn {
+    height: 15vmin;
   }
 }
