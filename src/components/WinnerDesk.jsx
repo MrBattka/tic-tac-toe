@@ -15,12 +15,12 @@ const WinnerDesk = ({ winner, setWinnerEditMode, setCurrentMove, setIsOpenMenu }
 
     return (
         <div className='winner_box_wrapper'>
-            <p>Winner Player: 
+            <p>Winner Player:
                 <span>{winner}</span>
                 <span>{!winner && 'The Draw'}</span>
             </p>
-            <button onClick={handleOnClickOnPlay}>Play Again</button>
-            <button onClick={handleOnClickOnMenu}>Back to Menu</button>
+            <button data-testid="btnPlayAgain" onClick={handleOnClickOnPlay}>Play Again</button>
+            <button data-testid="btnBackToMenu" onClick={handleOnClickOnMenu}>Back to Menu</button>
         </div>
     )
 }
