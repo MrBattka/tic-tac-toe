@@ -148,6 +148,9 @@
   margin-top: 3vmin;
   cursor: pointer;
   letter-spacing: 1px;
+  border: 1px solid white;
+  text-shadow: 0 0 10px white;
+  border-radius: 6px;
 }
 
 .wrapper_btn {
@@ -158,12 +161,14 @@
 
 .wrapper_btn button:hover {
   border: 1px solid white;
-  text-shadow: 0 0 10px white;
+  background-color: rgba(255, 255, 255, 0.256);
+  text-shadow: 0 0 10px rgb(176, 176, 176);
 }
 
 .wrapper_btn button:active {
   border: none;
   text-shadow: none;
+  background-color: rgba(198, 198, 198, 0.299);
 }
 
 @media(max-width: 450px) {

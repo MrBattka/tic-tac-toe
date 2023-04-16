@@ -17,8 +17,7 @@ const Board = ({ squares, xIsNext, onPlay }) => {
         onPlay(nextSquares)
       }
       
-      let status;
-      status = 'Next player: ' + (xIsNext ? 'X' : 'O')
+      const status = 'Next player: ' + (xIsNext ? 'X' : 'O')
     
       return (
         <>
